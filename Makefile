@@ -22,5 +22,5 @@ all: check
 check: test/runtests.jl.done
 
 
-test/%.jl.done: test/%.jl src/GeographicLib.jl
+test/%.jl.done: test/%.jl src/GeographicLibPy.jl
 	$(JULIA) $< && touch $@
