@@ -25,7 +25,6 @@ function __init__()
         end
     end
 
-
     copy!(geographiclib_geodesic, PyCall.pyimport("geographiclib.geodesic"))
     copy!(WGS84, geographiclib_geodesic[:Geodesic][:WGS84])
 end
