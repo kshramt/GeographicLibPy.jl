@@ -1,11 +1,11 @@
-import Base.Test: @test, @test_throws, @testset
+import Base.Test: @test, @test_throws
 
 unshift!(LOAD_PATH, joinpath(dirname(@__FILE__), "..", "src"))
-import GeographicLib
+import GeographicLibPy
 
 
 let
-    ret = GeographicLib.inverse(10, 20, 30, 40)
+    ret = GeographicLibPy.inverse(10, 20, 30, 40)
     @test isapprox(ret["a12"], 27.35053124404891)
     @test isapprox(ret["azi1"], 40.319640222045905)
     @test isapprox(ret["azi2"], 47.328994793150066)

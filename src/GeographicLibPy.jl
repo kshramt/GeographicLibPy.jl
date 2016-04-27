@@ -1,7 +1,7 @@
 __precompile__()
 
 
-module GeographicLib
+module GeographicLibPy
 
 import PyCall
 
