@@ -3,6 +3,7 @@ __precompile__()
 
 module GeographicLibPy
 
+import Conda
 import PyCall
 
 
