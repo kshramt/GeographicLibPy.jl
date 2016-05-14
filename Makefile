@@ -23,4 +23,4 @@ check: test/runtests.jl.done
 
 
 test/%.jl.done: test/%.jl src/GeographicLibPy.jl
-	$(JULIA) $< && touch $@
+	JULIA_LOAD_PATH="$(CURDIR)/src:$${JULIA_LOAD_PATH:-}" $(JULIA) $< && touch $@
