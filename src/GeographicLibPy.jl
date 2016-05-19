@@ -20,6 +20,11 @@ function __init__()
 end
 
 
+function direct(lat1, lon1, azi1, s12, model=WGS84)
+    model[:Direct](lat1, lon1, azi1, s12)
+end
+
+
 function inverse(lat1, lon1, lat2, lon2, model=WGS84)
     model[:Inverse](lat1, lon1, lat2, lon2)
 end
