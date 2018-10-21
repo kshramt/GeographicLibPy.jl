@@ -13,7 +13,7 @@ const WGS84 = PyCall.PyNULL()
 
 
 function __init__()
-    copy!(geographiclib, PyCall.pyimport("geographiclib"))
+    copy!(geographiclib, PyCall.pyimport_conda("geographiclib", "geographiclib", "conda-forge"))
 
     copy!(geographiclib_geodesic, PyCall.pyimport("geographiclib.geodesic"))
     copy!(WGS84, geographiclib_geodesic[:Geodesic][:WGS84])
