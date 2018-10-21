@@ -1,9 +1,6 @@
-__precompile__()
-
-
 module GeographicLibPy
 
-import PyCall
+using PyCall
 
 
 const geographiclib = PyCall.PyNULL()

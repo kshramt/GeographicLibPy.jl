@@ -17,10 +17,8 @@ export SHELLOPTS := pipefail:errexit:noclobber
 
 
 all: check
-
-
 check: test/runtests.jl.done
 
 
-test/%.jl.done: test/%.jl src/GeographicLibPy.jl
-	JULIA_LOAD_PATH="$(CURDIR)/src:$${JULIA_LOAD_PATH:-}" $(JULIA) $< && touch $@
+test/%.jl.done: test/%.jl src/GeographicLibPy.jl Project.toml
+	$(JULIA) --project=@. -e 'using Pkg; Pkg.test()' && touch $@
