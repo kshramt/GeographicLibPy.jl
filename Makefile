@@ -8,7 +8,7 @@ export JULIA := julia
 .SECONDARY:
 .ONESHELL:
 export SHELL := /bin/bash
-export SHELLOPTS := pipefail:errexit:nounset:noclobber
+export SHELLOPTS := pipefail:errexit:noclobber
 
 
 # Tasks
