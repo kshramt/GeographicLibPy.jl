@@ -1,6 +1,6 @@
 name = "GeographicLibPy"
-uuid = "b8e437d4-3d48-43d2-9b83-c0374f16ed17"
-version = "0.1.0"
+uuid = "afe2f917-f8cc-440e-81af-4c07f662a5a3"
+version = "0.2.0"
 
 [deps]
 PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
